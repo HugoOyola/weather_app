@@ -1,3 +1,3 @@
-import currentWeather from './current-weather.js';
+import currentWeather from './current-weather.js'
 
 currentWeather()
