@@ -1,6 +1,7 @@
 import weather from '../data/current-weather.js'
 import { formatDate, formatTemp } from './utils/format-data.js';
 import { weatherConditionsCodes } from './constants.js'
+import { getCurrentPosition } from './geolocation.js'
 // weather.main.temp
 // weatherConditionsCodes['2']
 // weatherConditionsCodes[]
@@ -65,6 +66,7 @@ function configCurrentWeather(weather) {
 
 export default function currentWeather() {
   // GEOLOCATION // API - weather // Config
+  getCurrentPosition()
   configCurrentWeather(weather)
   console.log(weather)
 }
