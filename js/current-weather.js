@@ -66,7 +66,16 @@ function configCurrentWeather(weather) {
 
 export default function currentWeather() {
   // GEOLOCATION // API - weather // Config
+  console.log('Esto pasa ANTES de getCurrentPosition')
+  // const latlon = getCurrentPosition()
   getCurrentPosition()
+  .then((data) => {
+    console.log('Hemos triunfado', data)
+  })
+  .catch((message) => {
+    console.log(message)
+  })
+  console.log('Esto pasa DESPUES de getCurrentPosition')
   configCurrentWeather(weather)
   console.log(weather)
 }
